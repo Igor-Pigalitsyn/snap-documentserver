@@ -73,8 +73,21 @@ parts:
       - locales-all
       - locales
       - libc6
-    stage-snaps:
-      - postgresql96
+      - postgresql-client-common
+      - postgresql-common
+      - bison
+      - flex
+      - libreadline-dev
+      - zlib1g-dev
+      - python-dev
+      - tcl8.6-dev
+      - libldap2-dev
+      - libxslt1-dev
+      - uuid-dev
+      - libxml2-utils
+      - libperl-dev
+    #stage-snaps:
+      #- postgresql96
     override-build: |
       rm -f lib/libicuuc.so.58
       rm -f lib/libPdfWriter.so
